@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0 !important
+}
+
+p,
+ol,
+ul {
+  margin: 0 !important;
+}
+
+// Bootstrap Override
+.card {
+  border-radius: 0 !important;
+
+  .card-body {
+    padding: 0.9375rem;
+  }
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+ngb-rating {
+  .star {
+    font-size: 1.5rem;
+    color: #b0c4de;
+  }
+
+  .filled {
+    color: #ffc107;
+  }
+}

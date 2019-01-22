@@ -1,0 +1,31 @@
+<section class="courses pb-2">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h5 class="section-title">{{ 'Courses' | uppercase }}</h5>
+        <hr class="mt-3 mb-5">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 mb-3" *ngFor="let course of courseList">
+        <div class="card align-items-center">
+          <img class="card-img-top" src="{{ '../../../../assets/images/courses/' + course.img}}" alt="">
+          <div class="card-body">
+            <h6 class="card-title font-weight-bold">
+              {{ ( course.title | slice:0:45 ) + '...'}}
+            </h6>
+            <p class="card-text">
+              <small>{{course.instructor}}</small>
+            </p>
+            <ngb-rating [(rate)]="course.rating" [readonly]="true">
+              <ng-template let-fill="fill" let-index="index">
+                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+              </ng-template>
+            </ngb-rating>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
